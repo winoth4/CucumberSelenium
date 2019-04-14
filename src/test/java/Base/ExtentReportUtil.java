@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 
 /**
- * Created by Karthik on 31/01/2019.
+ * Created by vinoth on 31/01/2019.
  */
 
 
@@ -34,11 +34,18 @@ public class ExtentReportUtil extends BaseUtil {
 
     }
 
-    public void ExtentReportScreenshot() throws IOException {
+    public void ExtentReportScreenshot()  {
 
-        var scr = ((TakesScreenshot)Driver).getScreenshotAs(OutputType.FILE);
-        Files.copy(scr.toPath(), new File(reportLocation + "screenshot.png").toPath());
-        scenarioDef.fail("details").addScreenCaptureFromPath(reportLocation + "screenshot.png");
+        File scr = ((TakesScreenshot)Driver).getScreenshotAs(OutputType.FILE);
+        File reportLoc=new File(reportLocation + "screenshot.png");
+        try {
+            Files.copy(scr.toPath(), reportLoc.toPath());
+            scenarioDef.fail("details").addScreenCaptureFromPath(reportLocation + "screenshot.png");
+        }
+
+         catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 

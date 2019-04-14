@@ -6,7 +6,7 @@ import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import org.openqa.selenium.chrome.ChromeDriver;
 /**
- * Created by Karthik on 31/01/2019.
+ * Created by vinoth on 31/01/2019.
  */
 
 public class Hook extends BaseUtil{
@@ -22,7 +22,7 @@ public class Hook extends BaseUtil{
     public void InitializeTest(Scenario scenario) {
 
 
-        scenarioDef = base.features.createNode(scenario.getName());
+        //scenarioDef = base.features.createNode(scenario.getName());
 
         System.out.println("Opening the browser : Firefox");
 
@@ -31,7 +31,7 @@ public class Hook extends BaseUtil{
 
 
         //Chrome driver
-        System.setProperty("webdriver.chrome.driver", "C:\Libs\chromedriver");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\vino\\driver\\chromedriver.exe");
         base.Driver = new ChromeDriver();
     }
 

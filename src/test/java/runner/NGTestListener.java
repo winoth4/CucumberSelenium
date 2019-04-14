@@ -11,7 +11,7 @@ import java.io.IOException;
 import static Base.BaseUtil.features;
 
 /**
- * Created by Karthik on 31/01/2019.
+ * Created by vinoth on 31/01/2019.
  */
 
 public class NGTestListener implements ITestListener {
@@ -33,11 +33,8 @@ public class NGTestListener implements ITestListener {
     public void onTestFailure(ITestResult iTestResult) {
         System.out.println("On test failure");
 
-        try{
             extentReportUtil.ExtentReportScreenshot();
-        }catch (IOException e){
-            e.printStackTrace();
-        }
+
     }
 
     @Override
