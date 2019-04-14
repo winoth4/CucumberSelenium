@@ -5,7 +5,7 @@ import com.aventstack.extentreports.ExtentTest;
 import org.openqa.selenium.WebDriver;
 
 /**
- * Created by vinoth on 31/01/2019.
+ * Created by Karthik on 31/01/2019.
  */
 
 public class BaseUtil {
@@ -18,6 +18,6 @@ public class BaseUtil {
 
     public static ExtentTest features;
 
-    public static String reportLocation = "/Users/vino/report/";
+    public static String reportLocation = "/Users/karthikkk/report/";
 
 }
